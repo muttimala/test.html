@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.content {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.tableClass {
+ border:2px solid #F0F8FF;
+}
+
+/* Table style */
+
+.TFtable{
+		width:100%; 
+		border-collapse:collapse; 
+        border:2px solid #F0F8FF;
+	}
+	.TFtable td{ 
+		padding:7px; 
+	}
+	/* provide some minimal visual accomodation for IE8 and below */
+	
+	/*  Define the background color for all the ODD background rows  */
+	.TFtable tr:nth-child(odd){ 
+		background: #F0F8FF;
+	}
+	/*  Define the background color for all the EVEN background rows  */
+	.TFtable tr:nth-child(even){
+		background: #FFFFFF;
+	}
+
+
+
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 10px;
+  transition: 0.2s;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+
+
+h2{
+background-color: #FEFFED;
+padding: 30px 35px;
+margin: -10px -50px;
+text-align:center;
+border-radius: 10px 10px 0 0;
+}
+hr{
+margin: 10px -50px;
+border: 0;
+border-top: 1px solid #ccc;
+margin-bottom: 40px;
+}
+div.container{
+width: 900px;
+height: 610px;
+margin:35px auto;
+font-family: 'Raleway', sans-serif;
+}
+div.main{
+width: 300px;
+padding: 10px 50px 10px;
+border: 2px solid gray;
+border-radius: 10px;
+font-family: raleway;
+float:left;
+margin-top:60px;
+}
+input[type=text]{
+width: 100%;
+height: 40px;
+padding: 5px;
+margin-bottom: 25px;
+margin-top: 5px;
+border: 2px solid #ccc;
+color: #4f4f4f;
+font-size: 16px;
+border-radius: 5px;
+background-color: #F0F8FF;
+}
+input[type=date]{
+width: 100%;
+height: 40px;
+padding: 5px;
+margin-bottom: 25px;
+margin-top: 5px;
+border: 2px solid #ccc;
+color: #4f4f4f;
+font-size: 16px;
+border-radius: 5px;
+background-color: #F0F8FF;
+}
+label{
+color: #464646;
+text-shadow: 0 1px 0 #fff;
+font-size: 14px;
+font-weight: bold;
+}
+#btn_id,#btn_name,#btn_class,#btn_tag{
+font-size: 16px;
+background: #1E90FF;
+
+color: white;
+font-weight: bold;
+cursor: pointer;
+width: 47.5%;
+
+margin-bottom:10px;
+padding: 7px;
+}
+#btn_id:hover,#btn_name:hover,#btn_class:hover,#btn_tag:hover{
+background: #1E90FF
+}
+#btn_name,#btn_tag{
+margin-left: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #F0F8FF;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+ border: 2px solid #F0F8FF;
+  padding: 20px;
+}
+
+/* Style the content */
+article {
+   width:500px;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  border: 2px solid #F0F8FF;
+  padding: 10px;
+}
+
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+<script>
+function myFunction() {
+ 
+  var Task =  document.getElementById("nameid").value;
+  var Assigned = document.getElementById("assignToId").value;
+  var date = document.getElementById("dateId").value;
+  
+  if (task != "" && Assigned != "" && date != ""){
+   var table = document.getElementById("myTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    cell1.innerHTML = Task;
+    cell2.innerHTML = date;
+    cell3.innerHTML = Assigned;
+  }
+ 
+}
+</script>
+<div class="content">
+
+<header>
+  <h1 align="left">Task Tracker</h1>
+    <h1 align="left">V2.0</h1>
+</header>
+
+<section>
+ <nav>
+    <h1>Create a Task</h1>
+    <form action="#" method="post" name="form_name" id="form_id" class="form_class" >
+    <label>Task Name :</label>
+    <input type="text" name="name" id="nameid" placeholder="Name" />
+    <label>Date :</label>
+    <input type="date" name="name" id="dateId"  />
+    <label>Assign To :</label>
+    <input type="text" name="name" id="assignToId"  />
+  
+    <input type="button" name="submit_id" id="btn_id" value="Submit"        onclick="myFunction()"/>
+    </form>
+  </nav>
+  <div class="tableClass">
+  <article>
+  
+  <h1>Existing Tasks</h1>
+  <div class="tableClass">
+   <table class="TFtable" id="myTable">
+  <tr bgcolor="#F2F2F2">
+    <td>Task1</td>
+    <td>12-06-2019</td>
+     <td> </td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Task2</td>
+    <td>12-05-2019</td>
+    <td></td>
+    <td>Mexico</td>
+  </tr>
+
+</table>
+ </div>
+  </article>
+ 
+</section>
+
+</div>
+</body>
+</html>
